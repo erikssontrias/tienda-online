@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear tu cuenta - KULT STUDIO</title>
+  <!-- Tipografía monospace moderna -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- BARRA SUPERIOR / HEADER -->
+  <header class="top-nav">
+    <div class="logo">
+      <span class="brand">KULT</span>
+      <span class="sub-brand">STUDIO // LAB</span>
+    </div>
+    <div class="nav-right">
+      <span class="badge">CUR: COP ($)</span>
+      <a href="index.html" class="link-back">[VOLVER A LA TIENDA]</a>
+    </div>
+  </header>
+
+  <!-- CONTENEDOR PRINCIPAL (2 COLUMNAS) -->
+  <main class="container">
+    
+    <!-- COLUMNA IZQUIERDA: INFORMACIÓN Y PREVIEW -->
+    <section class="info-column">
+      <div class="tag-label">■ SISTEMA DE ADMISIÓN // PROTOCOLO CO-2024</div>
+      <h1 class="main-title">CREAR TU CUENTA</h1>
+      <div class="tag-highlight">// REGISTRO EXCLUSIVO DROP LIST</div>
+      <p class="description">
+        Únete a la lista privada de KULT STUDIO para adquirir drops limitados con despacho express en Colombia antes de cada lanzamiento global.
+      </p>
+
+      <!-- TARJETA DE IMAGEN Y ACCESO -->
+      <div class="preview-card">
+        <div class="img-wrapper">
+          <img src="img/hero-register.jpg" alt="KULT Drop Edition" class="hero-img">
+          <span class="access-badge">[ACCESO ALPHA]</span>
+        </div>
+        <div class="location-tag">
+          BOGOTÁ, COLOMBIA // 04.6097° N, 74.0817° W<br>
+          EDICIÓN SERIAL LIMITADA // RUN 08
+        </div>
+      </div>
+
+      <!-- BARRA DE DISPONIBILIDAD -->
+      <div class="status-card">
+        <div class="status-header">
+          <span>DISPONIBILIDAD DE CUPO MENSUAL</span>
+          <span class="percent">87% ASIGNADO</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 87%;"></div>
+        </div>
+        <div class="security-text">
+          🛡️ 100% DATOS PRIVADOS // CERO SPAM COMERCIAL // SISTEMA V.4.02
+        </div>
+      </div>
+    </section>
+
+    <!-- COLUMNA DERECHA: FORMULARIO DE REGISTRO -->
+    <section class="form-column">
+      <div class="form-header">
+        <span class="form-title">■ DATOS DE REGISTRO</span>
+        <span class="form-sub">[BOG/MDE/CLO/BAQ]</span>
+      </div>
+
+      <form class="register-form">
+        <!-- NOMBRES Y APELLIDOS -->
+        <div class="form-row">
+          <div class="form-group">
+            <label>NOMBRES <span class="req">*</span></label>
+            <input type="text" placeholder="Ej. Mateo" required>
+          </div>
+          <div class="form-group">
+            <label>APELLIDOS <span class="req">*</span></label>
+            <input type="text" placeholder="Ej. Restrepo Cruz" required>
+          </div>
+        </div>
+
+        <!-- CORREO -->
+        <div class="form-group">
+          <label>CORREO ELECTRÓNICO <span class="req">*</span></label>
+          <input type="email" placeholder="identidad@dominio.co" required>
+        </div>
+
+        <!-- MÓVIL Y CIUDAD -->
+        <div class="form-row">
+          <div class="form-group">
+            <label>MÓVIL SMS DROPS (+57 COLOMBIA) <span class="req">*</span></label>
+            <div class="phone-input">
+              <span class="prefix">+57</span>
+              <input type="tel" placeholder="300 000 0000" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>CIUDAD DESPACHO <span class="req">*</span></label>
+            <select required>
+              <option value="" disabled selected>Seleccionar...</option>
+              <option value="bogota">Bogotá</option>
+              <option value="medellin">Medellín</option>
+              <option value="cali">Cali</option>
+              <option value="barranquilla">Barranquilla</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- CONTRASEÑAS -->
+        <div class="form-row">
+          <div class="form-group">
+            <label>CONTRASEÑA SEGURA <span class="req">*</span></label>
+            <input type="password" placeholder="••••••••••••" required>
+          </div>
+          <div class="form-group">
+            <label>CONFIRMAR CONTRASEÑA <span class="req">*</span></label>
+            <input type="password" placeholder="••••••••••••" required>
+          </div>
+        </div>
+
+        <!-- NIVEL DE CRIPTO-SEGURIDAD -->
+        <div class="crypto-box">
+          <div class="crypto-header">
+            <span>NIVEL DE CRIPTO-SEGURIDAD</span>
+            <span class="crypto-status">VACÍO</span>
+          </div>
+          <p class="crypto-hint">Mínimo 8 caracteres, alfanumérico con caracteres especiales.</p>
+        </div>
+
+        <!-- SELECCIÓN DE TALLA -->
+        <div class="size-section">
+          <div class="size-header">
+            <span>TALLA HABITUAL DE PREFERENCIA (PRE-RESERVA AUTOMÁTICA)</span>
+            <span class="size-cupo">[CUPO 1 UNIDAD]</span>
+          </div>
+          <div class="size-options">
+            <button type="button" class="size-btn">S</button>
+            <button type="button" class="size-btn active">M</button>
+            <button type="button" class="size-btn">L</button>
+            <button type="button" class="size-btn">XL</button>
+            <button type="button" class="size-btn">XXL</button>
+          </div>
+        </div>
+
+        <!-- CHECKBOXES -->
+        <div class="checkbox-group">
+          <label class="custom-checkbox">
+            <input type="checkbox" checked>
+            <span class="checkmark"></span>
+            Deseo recibir claves de acceso anticipado 15 minutos antes vía WhatsApp/SMS antes del lanzamiento oficial.
+          </label>
+          <label class="custom-checkbox">
+            <input type="checkbox" required>
+            <span class="checkmark"></span>
+            Acepto los <a href="#">Términos de Servicio</a> y la <a href="#">Política de Privacidad</a> de KULT STUDIO Colombia.
+          </label>
+        </div>
+
+        <!-- BOTÓN PRINCIPAL -->
+        <button type="submit" class="btn-submit">
+          CREAR IDENTIFICADOR DE MIEMBRO ➔
+        </button>
+
+        <!-- SEPARADOR -->
+        <div class="divider">
+          <span>O ACCEDE RÁPIDAMENTE CON</span>
+        </div>
+
+        <!-- SOCIAL LOGIN -->
+        <div class="social-row">
+          <button type="button" class="btn-social">GOOGLE ACCREDITATION</button>
+          <button type="button" class="btn-social">APPLE PASSPORT</button>
+        </div>
+
+        <!-- FOOTER FORM -->
+        <div class="form-footer">
+          ¿YA POSEES IDENTIFICADOR DE ACCESO? <a href="#" class="link-login">[INICIAR SESIÓN AQUÍ]</a>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- FOOTER INFERIOR -->
+  <footer class="bottom-footer">
+    <div>© 2024 KULT STUDIO INC. PROTOCOLO SEGURO // BOGOTÁ, COLOMBIA</div>
+    <div>EDICIÓN LIMITADA • SEGURIDAD ACTIVA</div>
+  </footer>
+
+</body>
+</html>
