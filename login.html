@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión - KULT STUDIO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- BARRA SUPERIOR / HEADER -->
+  <header class="top-nav">
+    <div class="logo">
+      <span class="brand">KULT</span>
+      <span class="sub-brand">STUDIO // LAB</span>
+    </div>
+    <div class="nav-right">
+      <span class="badge">CUR: COP ($)</span>
+      <a href="index.html" class="link-back">[VOLVER A LA TIENDA]</a>
+    </div>
+  </header>
+
+  <!-- CONTENEDOR PRINCIPAL (2 COLUMNAS) -->
+  <main class="container">
+    
+    <!-- COLUMNA IZQUIERDA: INFORMACIÓN Y BENEFICIOS -->
+    <section class="info-column">
+      <div class="tag-label">■ FASE // 04 • AUTH GATEWAY</div>
+      <h1 class="main-title">INICIAR SESIÓN EN KULT STUDIO</h1>
+      <div class="tag-highlight">// PROTOCOLO DE ACCESO // MIEMBROS KULT</div>
+      <p class="description">
+        Identificación requerida para consultar tus compras y pedidos, seriales adquiridos y activaciones clandestinas en Colombia.
+      </p>
+
+      <!-- PREVIEW DE IMAGEN -->
+      <div class="preview-card">
+        <div class="img-wrapper">
+          <img src="img/login-hero.jpg" alt="KULT Official Collection" class="hero-img">
+        </div>
+        <div class="location-tag">
+          COLECCIÓN OFICIAL // 2024.BOG
+        </div>
+      </div>
+
+      <!-- LISTA DE BENEFICIOS -->
+      <div class="status-card">
+        <div class="status-header">
+          <span>🛡️ BENEFICIOS DE IDENTIFICACIÓN</span>
+        </div>
+        <ul class="benefits-list">
+          <li><strong>01.</strong> Acceso prioritario 15 min antes a Drops limitados y cápsulas secretas.</li>
+          <li><strong>02.</strong> Historial de pedidos con rastreo sincronizado (Servientrega & Coordinadora).</li>
+          <li><strong>03.</strong> Libreta de direcciones urbanas guardadas en Colombia (BOG, MDE, CLO, BAQ).</li>
+          <li><strong>04.</strong> Descarga libre de publicaciones, fanzines digitales y stems de audio KULT.</li>
+        </ul>
+        <div class="security-text" style="margin-top: 15px;">
+          ESTADO DE NODO: <span style="color: var(--accent-neon);">● ONLINE (BOG-01)</span><br>
+          PROTOCOLO DE ACCESO // MIEMBROS KULT
+        </div>
+      </div>
+    </section>
+
+    <!-- COLUMNA DERECHA: FORMULARIO LOGIN -->
+    <section class="form-column">
+      <div class="form-header">
+        <span class="form-title">TERMINAL // KULT-ID 2.4.9</span>
+        <span class="form-sub">■ ■ ■</span>
+      </div>
+
+      <form class="login-form">
+        <!-- IDENTIFICADOR -->
+        <div class="form-group">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+            <label style="margin: 0;">IDENTIFICADOR / CORREO ELECTRÓNICO</label>
+            <span style="color: var(--text-muted); font-size: 9px;">[COLOMBIA REG.]</span>
+          </div>
+          <div class="input-with-icon">
+            <span class="icon">@</span>
+            <input type="email" placeholder="usuario@correo.co" required>
+          </div>
+        </div>
+
+        <!-- CONTRASEÑA -->
+        <div class="form-group">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+            <label style="margin: 0;">CONTRASEÑA CIFRADA</label>
+            <a href="#" style="color: var(--accent-neon); text-decoration: none; font-size: 9px;">¿OLVIDASTE TU CONTRASEÑA? [RECUPERAR CLAVE]</a>
+          </div>
+          <div class="input-with-icon">
+            <span class="icon">🔒</span>
+            <input type="password" placeholder="••••••••••••" required>
+            <span class="icon-right">👁️</span>
+          </div>
+        </div>
+
+        <!-- CHECKBOX REMEMBER -->
+        <div class="checkbox-group" style="margin-bottom: 20px;">
+          <label class="custom-checkbox">
+            <input type="checkbox" checked>
+            <span class="checkmark"></span>
+            MANTENER SESIÓN ACTIVA EN ESTE DISPOSITIVO SEGURO
+          </label>
+        </div>
+
+        <!-- BOTÓN INGRESAR -->
+        <button type="submit" class="btn-submit">
+          INGRESAR A MI CUENTA ➔
+        </button>
+
+        <!-- DIVIDER -->
+        <div class="divider">
+          <span>[ O CONTINUAR CON ]</span>
+        </div>
+
+        <!-- SOCIAL LOGIN -->
+        <div class="social-row">
+          <button type="button" class="btn-social">G GOOGLE // OAUTH</button>
+          <button type="button" class="btn-social"> APPLE // CONNECT</button>
+        </div>
+
+        <!-- FOOTER FORM -->
+        <div class="form-footer-box">
+          <div>
+            <span style="color: var(--text-muted);">¿AÚN NO TIENES IDENTIFICADOR?</span><br>
+            <span style="color: var(--text-muted); font-size: 9px;">Apertura de fichas sujeta a disponibilidad de cupos en Colombia.</span>
+          </div>
+          <a href="registro.html" class="link-register">[CREAR CUENTA NUEVA]</a>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- BARRA DE SERVIDORES DE LOGIN -->
+  <div class="server-status-bar">
+    <div>LAT: 4.7110° N, 74.0721° W</div>
+    <div>SERVIDORES: BOG-DC01</div>
+    <div>CARGA: ESTABLE // 99.98%</div>
+    <div>KULT LABS INTEL</div>
+  </div>
+
+  <!-- FOOTER INFERIOR -->
+  <footer class="bottom-footer">
+    <div>© 2024 KULT STUDIO INC. PROTOCOLO SEGURO // BOGOTÁ, COLOMBIA</div>
+    <div>TIENDA OFICIAL • SEGURIDAD ACTIVA</div>
+  </footer>
+
+</body>
+</html>
