@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mantenimiento - KULT STUDIO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- BARRA SUPERIOR / HEADER -->
+  <header class="top-nav">
+    <div class="logo">
+      <span class="brand">KULT</span>
+      <span class="sub-brand">STUDIO // OFFLINE</span>
+    </div>
+    <div class="nav-right">
+      <span class="badge">SYS_LOCK: ACTIVE</span>
+      <span class="link-back" style="color: var(--accent-neon);">LOC: BOG / MDE // COLOMBIA</span>
+    </div>
+  </header>
+
+  <!-- CONTENEDOR PRINCIPAL DE MANTENIMIENTO -->
+  <main class="maintenance-container">
+    
+    <!-- ETIQUETA DE CÓDIGO 503 -->
+    <div class="status-code-box">
+      <span class="code-tag">■ CÓDIGO // 503 SERVICE UNAVAILABLE</span>
+      <span class="code-sub">[CIERRE TEMPORAL DE TIENDA]</span>
+    </div>
+
+    <!-- TÍTULOS PRINCIPALES -->
+    <h1 class="maintenance-title">
+      MODO MANTENIMIENTO<br>
+      <span class="highlight-offline">// SISTEMA OFFLINE</span>
+    </h1>
+
+    <p class="maintenance-desc">
+      Estamos optimizando los servidores y preparando el próximo Drop. Nuestra tienda online se reabrirá en breve con la nueva colección bajo nuevos parámetros de inventario serializado.[cite: 5]
+    </p>
+
+    <!-- TELEMETRÍA / ESTADO DEL SERVIDOR -->
+    <div class="telemetry-card">
+      <div class="telemetry-header">
+        <span>■ ■ ■</span>
+        <span class="telemetry-title">TELEMETRÍA // ESTADO DEL SERVIDOR KULT_NODE_01</span>
+      </div>
+      
+      <div class="telemetry-grid">
+        <div class="telemetry-row">
+          <span class="t-label">ESTADO OPERATIVO:</span>
+          <span class="t-val tech">EN REVISIÓN TÉCNICA</span>
+        </div>
+        <div class="telemetry-row">
+          <span class="t-label">MOTIVO:</span>
+          <span class="t-val">DESPLIEGUE DROP 05</span>
+        </div>
+        <div class="telemetry-row">
+          <span class="t-label">ESTIMADO DE REAPERTURA:</span>
+          <span class="t-val neon">02H : 45M : 12S</span>
+        </div>
+        <div class="telemetry-row">
+          <span class="t-label">SOPORTE DE PEDIDOS:</span>
+          <span class="t-val">SOPORTE@KULTSTUDIO.CO</span>
+        </div>
+      </div>
+
+      <div class="telemetry-footer">
+        <span>LATENCIA NODO BOGOTÁ: 11ms</span>
+        <span class="private-mode">MODO PRIVADO ACTIVO</span>
+      </div>
+    </div>
+
+    <!-- CAJA DE NOTIFICACIÓN -->
+    <div class="notify-card">
+      <div class="notify-title">🔔 NOTIFICACIÓN INMEDIATA AL ABRIR</div>
+      <p class="notify-hint">Ingresa tu correo para ser notificado de inmediato cuando la tienda y el próximo lanzamiento estén disponibles:</p>
+      
+      <form class="notify-form" onsubmit="event.preventDefault();">
+        <input type="email" placeholder="TU CORREO ELECTRÓNICO..." required class="notify-input">
+        <button type="submit" class="btn-notify">[ NOTIFICARME REAPERTURA ]</button>
+      </form>
+    </div>
+
+  </main>
+
+  <!-- FOOTER INFERIOR -->
+  <footer class="bottom-footer">
+    <div>© 2024 KULT STUDIO INC. TIENDA OFICIAL COLOMBIA // BOGOTÁ</div>
+    <div>ESTADO: MANTENIMIENTO ACTIVO • SHA-256 ENCRYPTED</div>
+  </footer>
+
+</body>
+</html>

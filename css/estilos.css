@@ -823,3 +823,181 @@ input:focus, select:focus {
   font-size: 10px;
   border-top: 1px dashed var(--border-color);
 }
+/* ===================================================
+   ESTILOS ESPECÍFICOS PARA LA PANTALLA DE MANTENIMIENTO
+   =================================================== */
+
+.maintenance-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.status-code-box {
+  display: inline-flex;
+  background: #1b2011;
+  border: 1px solid var(--border-color);
+  padding: 5px 12px;
+  margin-bottom: 20px;
+  gap: 15px;
+  font-size: 11px;
+}
+
+.code-tag {
+  color: var(--accent-neon);
+  font-weight: 700;
+}
+
+.code-sub {
+  color: var(--text-muted);
+}
+
+.maintenance-title {
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.maintenance-title .highlight-offline {
+  color: var(--text-main);
+  opacity: 0.85;
+}
+
+.maintenance-desc {
+  color: var(--text-muted);
+  font-size: 13px;
+  max-width: 650px;
+  margin: 0 auto 35px auto;
+  line-height: 1.6;
+}
+
+.telemetry-card {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  text-align: left;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.telemetry-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  color: var(--text-muted);
+  font-size: 11px;
+}
+
+.telemetry-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 20px;
+  margin-bottom: 15px;
+}
+
+.telemetry-row {
+  display: flex;
+  justify-content: space-between;
+  background: var(--input-bg);
+  border: 1px solid var(--border-color);
+  padding: 8px 12px;
+  font-size: 11px;
+}
+
+.t-label {
+  color: var(--text-muted);
+}
+
+.t-val {
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+.t-val.tech {
+  color: var(--accent-neon);
+}
+
+.t-val.neon {
+  color: var(--accent-neon);
+}
+
+.telemetry-footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px dashed var(--border-color);
+  padding-top: 12px;
+  color: var(--text-muted);
+  font-size: 10px;
+}
+
+.private-mode {
+  color: var(--accent-neon);
+}
+
+.notify-card {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  padding: 25px;
+  text-align: left;
+}
+
+.notify-title {
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+
+.notify-hint {
+  color: var(--text-muted);
+  font-size: 11px;
+  margin-bottom: 15px;
+}
+
+.notify-form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+}
+
+.notify-input {
+  background: var(--input-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 12px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  outline: none;
+}
+
+.notify-input:focus {
+  border-color: var(--accent-neon);
+}
+
+.btn-notify {
+  background: var(--accent-neon);
+  color: #000;
+  border: none;
+  padding: 12px 20px;
+  font-family: var(--font-mono);
+  font-weight: 800;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.btn-notify:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .telemetry-grid {
+    grid-template-columns: 1fr;
+  }
+  .notify-form {
+    grid-template-columns: 1fr;
+  }
+}
