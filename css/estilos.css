@@ -1070,3 +1070,1097 @@ input:focus, select:focus {
     align-items: flex-start;
   }
 }
+/* ===================================================
+   ESTILOS ESPECÍFICOS PARA PANTALLA TIENDAS FÍSICAS
+   =================================================== */
+
+/* ===================================================
+   KULT STUDIO - ESTILOS GENERALES Y GLOBAL
+   =================================================== */
+
+:root {
+  --bg-color: #0b0e11;
+  --panel-bg: #111418;
+  --input-bg: #161a20;
+  --border-color: #262d35;
+  --text-main: #ffffff;
+  --text-muted: #8b949e;
+  --accent-neon: #ccff00;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: var(--font-mono);
+  margin: 0;
+  padding: 0;
+}
+
+/* Barra superior */
+.top-bar {
+  background: #15191f;
+  border-bottom: 1px solid var(--border-color);
+  padding: 8px 20px;
+  font-size: 10px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+/* Header principal */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--bg-color);
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand {
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.sub-brand {
+  font-size: 9px;
+  color: var(--text-muted);
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  color: var(--accent-neon);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-input {
+  background: var(--input-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 6px 12px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  outline: none;
+}
+
+.btn-account, .btn-cart {
+  color: var(--text-main);
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 700;
+  border: 1px solid var(--border-color);
+  padding: 6px 10px;
+  background: var(--input-bg);
+}
+
+/* Contenedores generales */
+.section-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.tag-label {
+  font-size: 10px;
+  color: var(--accent-neon);
+  font-weight: 700;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.section-header {
+  margin-bottom: 25px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 10px;
+}
+
+.section-header h2 {
+  font-size: 18px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.sec-subtitle {
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+/* Grillas y Tarjetas base */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.product-card {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.card-img-box {
+  position: relative;
+  background: #000;
+}
+
+.card-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  font-size: 9px;
+  padding: 3px 8px;
+  font-weight: 700;
+}
+
+.highlight-tag {
+  background: var(--accent-neon);
+  color: #000;
+  border: none;
+}
+
+.card-info {
+  padding: 20px;
+}
+
+.prod-code {
+  font-size: 9px;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Botones genéricos */
+.btn-primary {
+  background: var(--accent-neon);
+  color: #000;
+  border: none;
+  padding: 10px 15px;
+  font-family: var(--font-mono);
+  font-weight: 800;
+  font-size: 11px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-secondary {
+  background: var(--input-bg);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  padding: 10px 15px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 11px;
+  cursor: pointer;
+  text-decoration: none;
+}
+/* ===================================================
+   KULT STUDIO - SISTEMA DE ESTILOS GLOBALES & TIENDAS
+   =================================================== */
+
+:root {
+  --bg-color: #080a0c;
+  --panel-bg: #101317;
+  --input-bg: #15191e;
+  --border-color: #222830;
+  --text-main: #ffffff;
+  --text-muted: #808b96;
+  --accent-neon: #ccff00;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+/* ---------------- HEADER & BARS ---------------- */
+.top-bar {
+  background: #12161b;
+  border-bottom: 1px solid var(--border-color);
+  padding: 6px 20px;
+  font-size: 9px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.status-dot {
+  color: var(--accent-neon);
+}
+
+.bar-separator {
+  color: var(--border-color);
+}
+
+.status-right {
+  margin-left: auto;
+}
+
+.time-tag {
+  background: var(--input-bg);
+  border: 1px solid var(--border-color);
+  padding: 2px 6px;
+  color: var(--accent-neon);
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--bg-color);
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand {
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: -0.5px;
+}
+
+.sub-brand {
+  font-size: 9px;
+  color: var(--text-muted);
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.nav-links a.active, .nav-links a:hover {
+  color: var(--accent-neon);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background: var(--input-bg);
+  border: 1px solid var(--border-color);
+  padding: 4px 8px;
+  gap: 6px;
+}
+
+.search-input {
+  background: transparent;
+  border: none;
+  color: var(--text-main);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  outline: none;
+  width: 140px;
+}
+
+.search-kbd {
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  font-size: 8px;
+  color: var(--text-muted);
+  padding: 1px 4px;
+}
+
+.btn-account, .btn-cart {
+  color: var(--text-main);
+  text-decoration: none;
+  font-size: 9px;
+  font-weight: 700;
+  border: 1px solid var(--border-color);
+  padding: 6px 10px;
+  background: var(--input-bg);
+}
+
+.btn-cart {
+  background: var(--accent-neon);
+  color: #000;
+  border: none;
+}
+
+.breadcrumb-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 25px;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 9px;
+  color: var(--text-muted);
+}
+
+.breadcrumb-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.active-crumb {
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+.status-active {
+  color: var(--accent-neon);
+  margin-left: 10px;
+}
+
+/* ---------------- LAYOUT GENERAL ---------------- */
+.section-container {
+  max-width: 1240px;
+  margin: 35px auto;
+  padding: 0 20px;
+}
+
+.tag-label, .section-tag {
+  font-size: 9px;
+  color: var(--accent-neon);
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.section-header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 12px;
+  margin-bottom: 25px;
+}
+
+.section-title-large {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.section-status-tag {
+  font-size: 9px;
+  color: var(--text-muted);
+}
+
+.section-header-desc {
+  color: var(--text-muted);
+  font-size: 10px;
+  max-width: 400px;
+  text-align: right;
+}
+
+/* BOTONES GLOBALES */
+.btn-primary {
+  background: var(--accent-neon);
+  color: #000;
+  border: none;
+  padding: 10px 14px;
+  font-family: var(--font-mono);
+  font-weight: 800;
+  font-size: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-secondary {
+  background: var(--input-bg);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  padding: 10px 14px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+/* ---------------- SECCIÓN 1: HERO TIENDAS ---------------- */
+.hero-stores-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.store-hero-title {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -1px;
+  margin-bottom: 15px;
+}
+
+.highlight {
+  color: var(--accent-neon);
+}
+
+.store-hero-desc {
+  color: var(--text-muted);
+  font-size: 11px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.hero-badges-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.badge-neon {
+  background: #1b2208;
+  border: 1px solid var(--accent-neon);
+  color: var(--accent-neon);
+  font-size: 9px;
+  padding: 4px 8px;
+  font-weight: 700;
+}
+
+.badge-dark {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  font-size: 9px;
+  padding: 4px 8px;
+}
+
+.store-status-box {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.status-metric {
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-label {
+  font-size: 8px;
+  color: var(--text-muted);
+}
+
+.metric-value {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--accent-neon);
+}
+
+.city-filter-bar {
+  display: flex;
+  gap: 8px;
+  margin-top: 25px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 20px;
+}
+
+.city-btn {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  padding: 8px 12px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.city-btn.active {
+  background: var(--accent-neon);
+  color: #000;
+  border-color: var(--accent-neon);
+}
+
+/* ---------------- SECCIÓN 2: DIRECTORIO SEDES ---------------- */
+.stores-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.store-card {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.store-card-img-wrap {
+  position: relative;
+  height: 220px;
+  background: #000;
+}
+
+.store-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-badge-group {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tag-status {
+  background: rgba(0, 0, 0, 0.85);
+  border: 1px solid var(--border-color);
+  color: var(--accent-neon);
+  font-size: 8px;
+  padding: 3px 6px;
+  font-weight: 700;
+}
+
+.tag-highlight {
+  background: var(--accent-neon);
+  color: #000;
+  font-size: 8px;
+  padding: 3px 6px;
+  font-weight: 800;
+}
+
+.tag-dark {
+  background: #000;
+  color: #fff;
+  border: 1px solid var(--border-color);
+  font-size: 8px;
+  padding: 3px 6px;
+}
+
+.img-overlay-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 10px;
+  font-size: 8px;
+  color: var(--text-muted);
+}
+
+.store-card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.store-code {
+  font-size: 9px;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.store-name {
+  font-size: 15px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.store-info-text {
+  color: var(--text-muted);
+  font-size: 10px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.store-details-list {
+  border-top: 1px dashed var(--border-color);
+  padding-top: 12px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.detail-item {
+  display: flex;
+  gap: 8px;
+  font-size: 9px;
+  color: var(--text-muted);
+}
+
+.detail-item strong {
+  color: var(--text-main);
+}
+
+.store-services-box {
+  background: var(--input-bg);
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.services-box-title {
+  font-size: 8px;
+  color: var(--accent-neon);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.store-services-box ul {
+  list-style: none;
+  font-size: 9px;
+  color: var(--text-muted);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.store-action-btn {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+/* ---------------- SECCIÓN 3: SERVICIOS IN-STORE ---------------- */
+.services-4col-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.service-block-card {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.service-icon {
+  font-size: 16px;
+}
+
+.service-code {
+  font-size: 8px;
+  color: var(--text-muted);
+}
+
+.service-block-title {
+  font-size: 11px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.service-block-text {
+  color: var(--text-muted);
+  font-size: 9px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.service-status-link {
+  font-size: 8px;
+  font-weight: 700;
+  color: var(--text-main);
+  border-top: 1px solid var(--border-color);
+  padding-top: 8px;
+}
+
+.highlight-link {
+  color: var(--accent-neon);
+}
+
+/* ---------------- SECCIÓN 4: AGENDAR CITA ---------------- */
+.booking-panel {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  padding: 30px;
+}
+
+.booking-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+}
+
+.booking-headline {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.booking-paragraph {
+  color: var(--text-muted);
+  font-size: 10px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.booking-check-list {
+  list-style: none;
+  font-size: 10px;
+  color: var(--text-main);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.booking-direct-contact {
+  background: var(--input-bg);
+  border: 1px solid var(--border-color);
+  padding: 12px;
+}
+
+.contact-tag {
+  font-size: 8px;
+  color: var(--text-muted);
+  display: block;
+}
+
+.whatsapp-btn {
+  color: var(--accent-neon);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 10px;
+}
+
+.booking-form-box {
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  padding: 20px;
+}
+
+.form-header-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+}
+
+.form-field {
+  margin-bottom: 12px;
+}
+
+.form-field label {
+  display: block;
+  font-size: 8px;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.form-input-text, .form-input-select {
+  width: 100%;
+  background: var(--input-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 8px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  outline: none;
+}
+
+.form-row-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.form-submit-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+}
+
+.form-disclaimer {
+  display: block;
+  text-align: center;
+  font-size: 8px;
+  color: var(--text-muted);
+  margin-top: 10px;
+}
+
+/* ---------------- SECCIÓN 5: FAQ ---------------- */
+.faq-center-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.faq-main-title {
+  font-size: 20px;
+  font-weight: 800;
+  margin-top: 4px;
+}
+
+.faq-main-subtitle {
+  color: var(--text-muted);
+  font-size: 10px;
+  margin-top: 4px;
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.faq-card {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+}
+
+.faq-card-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.active-faq {
+  border-color: var(--accent-neon);
+}
+
+.faq-card-content {
+  padding: 14px;
+  border-top: 1px dashed var(--border-color);
+  color: var(--text-muted);
+  font-size: 9px;
+  line-height: 1.6;
+}
+
+/* ---------------- SECCIÓN 6: NEWSLETTER ---------------- */
+.newsletter-banner {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  padding: 25px;
+}
+
+.news-banner-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.news-banner-title {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.news-banner-text {
+  color: var(--text-muted);
+  font-size: 10px;
+}
+
+.news-banner-form {
+  display: flex;
+  gap: 8px;
+}
+
+.news-input {
+  background: var(--input-bg);
+  border: 1px solid var(--border-color);
+  color: #fff;
+  padding: 8px 12px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+}
+
+/* ---------------- SECCIÓN 7: FOOTER ---------------- */
+.site-footer {
+  background: var(--panel-bg);
+  border-top: 1px solid var(--border-color);
+  margin-top: 50px;
+  padding: 40px 20px 0 20px;
+}
+
+.footer-columns-container {
+  max-width: 1200px;
+  margin: 0 auto 35px auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.brand-bold {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--accent-neon);
+}
+
+.brand-sub {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.footer-brand-desc {
+  color: var(--text-muted);
+  font-size: 9px;
+  line-height: 1.6;
+  margin: 10px 0 15px 0;
+}
+
+.footer-security-tags {
+  display: flex;
+  gap: 6px;
+}
+
+.sec-tag {
+  background: var(--input-bg);
+  border: 1px solid var(--border-color);
+  font-size: 8px;
+  color: var(--text-muted);
+  padding: 3px 6px;
+}
+
+.footer-link-title {
+  font-size: 10px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.footer-col-links ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-col-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 9px;
+}
+
+.footer-col-links a:hover {
+  color: var(--accent-neon);
+}
+
+.net-tag {
+  font-size: 8px;
+  color: var(--text-muted);
+}
+
+.footer-bottom-bar {
+  border-top: 1px solid var(--border-color);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 8px;
+  color: var(--text-muted);
+}
+
+.footer-bottom-status {
+  display: flex;
+  gap: 10px;
+}
+
+.status-crypt {
+  color: var(--accent-neon);
+}
+
+.status-link {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+/* RESPONSIVO */
+@media (max-width: 1000px) {
+  .stores-grid, .services-4col-grid, .footer-columns-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .booking-grid, .hero-stores-header, .news-banner-content {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .section-header-flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .section-header-desc {
+    text-align: left;
+    margin-top: 6px;
+  }
+}
+
+@media (max-width: 650px) {
+  .stores-grid, .services-4col-grid, .footer-columns-container, .form-row-2col {
+    grid-template-columns: 1fr;
+  }
+  .city-filter-bar {
+    flex-direction: column;
+  }
+}
