@@ -1001,3 +1001,72 @@ input:focus, select:focus {
     grid-template-columns: 1fr;
   }
 }
+/* ===================================================
+   ESTILOS ESPECÍFICOS PARA RECUPERAR CONTRASEÑA
+   =================================================== */
+
+.recover-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 140px);
+  padding: 20px;
+}
+
+.recover-card {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  width: 100%;
+  max-width: 550px;
+  padding: 40px;
+}
+
+.recover-title {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.recover-desc {
+  color: var(--text-muted);
+  font-size: 11px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.recover-form {
+  margin-bottom: 30px;
+}
+
+.recover-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border-color);
+  padding-top: 20px;
+  font-size: 9px;
+}
+
+.secure-token-text {
+  color: var(--text-muted);
+}
+
+.link-back-login {
+  color: var(--accent-neon);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.link-back-login:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .recover-card-footer {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recuperar Clave - KULT STUDIO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- BARRA SUPERIOR / HEADER -->
+  <header class="top-nav">
+    <div class="logo">
+      <span class="brand">KULT</span>
+      <span class="sub-brand">STUDIO // LAB</span>
+    </div>
+    <div class="nav-right">
+      <span class="badge">CUR: COP ($)</span>
+      <a href="index.html" class="link-back">[VOLVER A LA TIENDA]</a>
+    </div>
+  </header>
+
+  <!-- CONTENEDOR PRINCIPAL CENTRADO -->
+  <main class="recover-container">
+    
+    <div class="recover-card">
+      <h1 class="recover-title">RECUPERAR<br>CLAVE DE<br>ACCESO</h1>
+      
+      <p class="recover-desc">
+        Ingresa la dirección de correo electrónico vinculada a tu cuenta de KULT STUDIO. Te enviaremos un token criptográfico de un solo uso para reestablecer tu contraseña.
+      </p>
+
+      <form class="recover-form" onsubmit="event.preventDefault();">
+        <div class="form-group">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+            <label style="margin: 0;">CORREO ELECTRÓNICO REGISTRADO</label>
+            <span style="color: var(--text-muted); font-size: 9px;">[OBLIGATORIO]</span>
+          </div>
+          <div class="input-with-icon">
+            <span class="icon">@</span>
+            <input type="email" placeholder="ejemplo@dominio.co" required>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-submit">
+          ENVIAR ENLACE DE RECUPERACIÓN ➔
+        </button>
+      </form>
+
+      <!-- FOOTER DE LA TARJETA -->
+      <div class="recover-card-footer">
+        <span class="secure-token-text">🔒 ENLACE SEGURO CON EXPIRACIÓN AUTOMÁTICA</span>
+        <a href="login.html" class="link-back-login">¿RECORDASTE TU CLAVE? [VOLVER A INICIAR SESIÓN]</a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER INFERIOR -->
+  <footer class="bottom-footer">
+    <div>© 2024 KULT STUDIO INC. PROTOCOLO SEGURO // BOGOTÁ, COLOMBIA</div>
+    <div>EDICIÓN LIMITADA • SEGURIDAD ACTIVA</div>
+  </footer>
+
+</body>
+</html>
