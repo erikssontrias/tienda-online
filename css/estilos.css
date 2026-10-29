@@ -3107,3 +3107,508 @@ body {
     gap: 5px;
   }
 }
+/* ===================================================
+   ESTILOS ESPECÍFICOS PARA PANTALLA EDITORIAL // LOOKBOOK
+   =================================================== */
+
+.look-hero-header {
+  margin-bottom: 20px;
+}
+
+.look-hero-title {
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  margin: 5px 0 8px 0;
+}
+
+.look-hero-subtitle {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.look-subnav-bar {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: 15px 0;
+  flex-wrap: wrap;
+}
+
+.look-meta-tag {
+  margin-left: auto;
+  font-size: 9px;
+  color: var(--accent-neon);
+  font-weight: 700;
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  padding: 8px 12px;
+}
+
+/* SHOP LOOK 01 GRID */
+.look-interactive-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 20px;
+}
+
+.look-main-img-box {
+  position: relative;
+  background: #000;
+  height: 480px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.look-main-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Puntos interactivos */
+.hotspot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: var(--accent-neon);
+  border: 2px solid #000;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(204, 255, 0, 0.8);
+}
+.hs-1 { top: 28%; left: 35%; }
+.hs-2 { top: 45%; left: 62%; }
+.hs-3 { top: 70%; left: 55%; }
+
+.look-sidebar-products {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.lsp-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.lsp-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--input-bg);
+  border: 1px solid var(--border-color);
+  padding: 10px 12px;
+  margin-bottom: 10px;
+}
+
+.lsp-num {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--accent-neon);
+}
+
+.lsp-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.lsp-title {
+  font-size: 10px;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.lsp-price {
+  font-size: 9px;
+  color: var(--text-muted);
+}
+
+.lsp-btn {
+  padding: 6px 10px;
+  font-size: 9px;
+}
+
+.lsp-total-box {
+  border-top: 1px dashed var(--border-color);
+  padding-top: 15px;
+  margin-top: 10px;
+}
+
+.lsp-tot-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.lsp-tot-price {
+  color: var(--accent-neon);
+}
+
+.lsp-buy-all {
+  width: 100%;
+  text-align: center;
+  padding: 12px;
+}
+
+/* REGISTROS ANÁLOGOS */
+.analog-grid-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 20px;
+}
+
+.analog-card {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.ana-img-wrap {
+  position: relative;
+  height: 320px;
+  background: #000;
+  overflow: hidden;
+}
+
+.ana-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ana-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(0,0,0,0.85);
+  border: 1px solid var(--border-color);
+  color: var(--accent-neon);
+  font-size: 8px;
+  padding: 4px 8px;
+  font-weight: 700;
+}
+
+.ana-body {
+  padding: 20px;
+}
+
+.ana-heading {
+  font-size: 15px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.ana-txt {
+  color: var(--text-muted);
+  font-size: 10px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.ana-link {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--accent-neon);
+  text-decoration: none;
+}
+
+.analog-right-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.small-analog {
+  flex-direction: row;
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+}
+
+.ana-img-wrap-small {
+  position: relative;
+  width: 140px;
+  min-height: 150px;
+  background: #000;
+  overflow: hidden;
+}
+
+.ana-img-wrap-small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ana-body-small {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ana-heading-small {
+  font-size: 12px;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.ana-txt-small {
+  color: var(--text-muted);
+  font-size: 9px;
+  line-height: 1.4;
+}
+
+/* BANNER DISOLUCIÓN ARQUITECTÓNICA */
+.architectural-banner {
+  margin-top: 40px;
+}
+
+.arch-img-bg {
+  position: relative;
+  height: 380px;
+  background: #000;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.arch-img-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+}
+
+.arch-overlay-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 40px;
+  background: linear-gradient(to top, rgba(8,10,12,0.95), transparent);
+}
+
+.arch-title {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 5px 0 10px 0;
+}
+
+.arch-desc {
+  color: var(--text-muted);
+  font-size: 10px;
+  line-height: 1.6;
+  max-width: 700px;
+  margin-bottom: 20px;
+}
+
+.arch-btn-row {
+  display: flex;
+  gap: 10px;
+}
+
+/* MANIFIESTO & TRANSMISIONES */
+.manifesto-section {
+  margin-top: 40px;
+}
+
+.manifesto-box {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  padding: 35px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.manifesto-quote {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 12px;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.manifesto-author {
+  font-size: 9px;
+  color: var(--accent-neon);
+  font-weight: 800;
+}
+
+.transmissions-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.trans-card {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  padding: 18px;
+}
+
+.trans-code {
+  font-size: 8px;
+  color: var(--accent-neon);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.trans-title {
+  font-size: 12px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.trans-desc {
+  color: var(--text-muted);
+  font-size: 9px;
+  line-height: 1.4;
+}
+
+/* RESPONSIVO */
+@media (max-width: 1000px) {
+  .look-interactive-grid, .analog-grid-layout, .transmissions-grid {
+    grid-template-columns: 1fr;
+  }
+  .small-analog {
+    flex-direction: column;
+  }
+  .ana-img-wrap-small {
+    width: 100%;
+    height: 180px;
+  }
+}
+/* ===================================================
+   ESTILOS ADICIONALES PARA MICRO-TARJETAS DE LOOKBOOK
+   =================================================== */
+
+.lsp-desc-block {
+  margin-bottom: 12px;
+  border-bottom: 1px dashed var(--border-color);
+  padding-bottom: 10px;
+}
+
+.lsp-block-title {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--accent-neon);
+  margin-bottom: 4px;
+}
+
+.lsp-block-text {
+  font-size: 9px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.lsp-card-micro {
+  display: flex;
+  gap: 10px;
+  background: var(--input-bg);
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  margin-bottom: 8px;
+  align-items: center;
+}
+
+.lsp-card-highlight {
+  border-color: var(--accent-neon);
+  background: #141a0e;
+}
+
+.lsp-micro-img {
+  width: 55px;
+  height: 55px;
+  background: #000;
+  border: 1px solid var(--border-color);
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.lsp-micro-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lsp-top-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.lsp-pin {
+  font-size: 8px;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+.highlight-pin {
+  color: var(--accent-neon);
+}
+
+.lsp-price {
+  font-size: 10px;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.lsp-title {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--text-main);
+  display: block;
+}
+
+.lsp-sub {
+  font-size: 8px;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.lsp-tags-row {
+  display: flex;
+  gap: 4px;
+}
+
+.lsp-tot-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.lsp-pack-title {
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.lsp-pack-sub {
+  font-size: 7px;
+  color: var(--accent-neon);
+}
+
+.lsp-footnote {
+  display: block;
+  text-align: center;
+  font-size: 8px;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
