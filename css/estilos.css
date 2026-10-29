@@ -2839,3 +2839,271 @@ body {
     grid-template-columns: 1fr;
   }
 }
+/* ===================================================
+   ESTILOS ESPECÍFICOS PARA PANTALLA GRÁFICAS // ARTE & SERIGRAFÍA
+   =================================================== */
+
+.hero-graf-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.graf-hero-title {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  margin-bottom: 12px;
+}
+
+.graf-hero-desc {
+  color: var(--text-muted);
+  font-size: 11px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.hero-graf-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tech-spec-box {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  padding: 20px;
+}
+
+.spec-label {
+  font-size: 9px;
+  color: var(--accent-neon);
+  font-weight: 800;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.spec-text {
+  color: var(--text-muted);
+  font-size: 10px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.spec-metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.spec-tag-item {
+  background: var(--input-bg);
+  border: 1px solid var(--border-color);
+  padding: 4px 8px;
+  font-size: 8px;
+  color: var(--text-main);
+}
+
+/* ANATOMÍA DE LA GRÁFICA */
+.anatomy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.anatomy-card {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.featured-ana {
+  border-color: var(--accent-neon);
+}
+
+.ana-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.ana-num {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--accent-neon);
+}
+
+.ana-tag {
+  font-size: 8px;
+  background: var(--input-bg);
+  border: 1px solid var(--border-color);
+  padding: 2px 6px;
+  color: var(--text-muted);
+}
+
+.neon-tag {
+  background: var(--accent-neon);
+  color: #000;
+  font-weight: 800;
+  border: none;
+}
+
+.ana-title {
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.ana-desc {
+  color: var(--text-muted);
+  font-size: 10px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.ana-footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px dashed var(--border-color);
+  padding-top: 10px;
+  font-size: 8px;
+  color: var(--text-muted);
+}
+
+.ana-status {
+  font-weight: 700;
+}
+
+.neon-status {
+  color: var(--accent-neon);
+}
+
+/* BANNER GARANTÍA ESTAMPA */
+.print-guarantee-banner {
+  margin-top: 25px;
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 800;
+  color: var(--accent-neon);
+}
+
+.pgb-sub {
+  color: var(--text-muted);
+  font-size: 9px;
+  font-weight: 400;
+}
+
+/* MACRO ARCHIVE GRID */
+.macro-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.macro-item {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  padding: 10px;
+}
+
+.macro-img-box {
+  height: 140px;
+  background: #000;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.macro-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.macro-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.m-code {
+  font-size: 8px;
+  color: var(--accent-neon);
+  font-weight: 700;
+}
+
+.m-title {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-top: 2px;
+}
+
+/* ACCESO ANTICIPADO BANNER */
+.early-access-banner {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  padding: 30px;
+}
+
+.early-content-flex {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.early-title {
+  font-size: 20px;
+  font-weight: 800;
+  margin-top: 5px;
+  margin-bottom: 8px;
+}
+
+.early-desc {
+  color: var(--text-muted);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.early-input-row {
+  display: flex;
+  gap: 8px;
+}
+
+.early-input {
+  background: var(--input-bg);
+  border: 1px solid var(--border-color);
+  color: #fff;
+  padding: 10px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  flex-grow: 1;
+}
+
+/* RESPONSIVO */
+@media (max-width: 1000px) {
+  .hero-graf-grid, .anatomy-grid, .macro-grid, .early-content-flex {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .hero-graf-grid, .anatomy-grid, .macro-grid, .early-content-flex {
+    grid-template-columns: 1fr;
+  }
+  .print-guarantee-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+}
