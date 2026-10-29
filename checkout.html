@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pasarela de Pago Segura // Checkout - KULT STUDIO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- BARRA MARQUEE SUPERIOR -->
+  <div class="top-bar">
+    <span class="status-dot">■</span>
+    <span>SYSTEM // ONLINE</span>
+    <span class="bar-separator">•</span>
+    <span>DROP 04 // ONLINE EXCLUSIVE • WORLDWIDE SHIPPING • LIMITED QUANTITIES</span>
+    <span class="bar-separator">•</span>
+    <span class="status-right">LOC: BOG / COL // V.4.82</span>
+  </div>
+
+  <!-- HEADER PRINCIPAL -->
+  <header class="main-header">
+    <div class="logo">
+      <span class="brand">KULT</span>
+      <span class="sub-brand">STUDIO // LAB</span>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">COLECCIÓN</a>
+      <a href="novedades.html">NOVEDADES</a>
+      <a href="graficas.html">GRÁFICOS</a>
+      <a href="oversized.html">OVERSIZED</a>
+      <a href="tienda.html">TIENDA</a>
+      <a href="editorial.html">EDITORIAL</a>
+    </nav>
+    <div class="header-actions">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" placeholder="BUSCAR PRENDA..." class="search-input">
+        <span class="search-kbd">BLK</span>
+      </div>
+      <a href="login.html" class="btn-account">COP ($)</a>
+      <a href="#" class="btn-account">ACCESO [0]</a>
+      <a href="#" class="btn-cart">CARRITO [2]</a>
+    </div>
+  </header>
+
+  <!-- BARRA DE PROCESO DE PAGO SEGURO -->
+  <div class="checkout-steps-bar">
+    <div class="cs-left">
+      <span class="cs-title">PASARELA DE PAGO SEGURA // V.4.82</span>
+      <span class="cs-session">SESIÓN ID: #KT-90C54</span>
+    </div>
+    <div class="cs-steps">
+      <span class="step-done">01 IDENTIFICACIÓN</span>
+      <span class="step-sep">/</span>
+      <span class="step-active">02 LOGÍSTICA & PAGO</span>
+      <span class="step-sep">/</span>
+      <span class="step-pending">03 CONFIRMACIÓN</span>
+    </div>
+  </div>
+
+  <main class="page-content">
+    <div class="checkout-grid-layout">
+      
+      <!-- COLUMNA IZQUIERDA: FORMULARIOS DE ENVÍO Y PAGO -->
+      <div class="checkout-form-col">
+        
+        <!-- PAGO RÁPIDO EXPRESS -->
+        <div class="checkout-card">
+          <span class="tag-label">[PAGO RÁPIDO EXPRESS]</span>
+          <div class="express-pay-row">
+            <button class="exp-btn"> APPLE PAY</button>
+            <button class="exp-btn">G-PAY G-PAY</button>
+            <button class="exp-btn">P PAYPAL</button>
+          </div>
+          <span class="exp-sub">O CONTINUAR CON FORMULARIO</span>
+        </div>
+
+        <!-- 01 DATOS DE ENTREGA Y ENVÍO -->
+        <div class="checkout-card">
+          <div class="cc-header-num">
+            <span class="num-box">01</span>
+            <h3>DATOS DE ENTREGA Y ENVÍO</h3>
+            <span class="cc-right-link">¿YA TIENES CUENTA? INICIAR SESIÓN</span>
+          </div>
+
+          <form class="delivery-form" onsubmit="event.preventDefault();">
+            <div class="form-row-2">
+              <div class="form-group">
+                <label>CORREO ELECTRÓNICO (RECIBIDA DE FACTURA & TRACKING)</label>
+                <input type="email" value="ALEX.VANGUARD@KULT-ARCHIVE.NET" required>
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label>NOMBRES</label>
+                <input type="text" value="ALEJANDRO" required>
+              </div>
+              <div class="form-group">
+                <label>APELLIDOS</label>
+                <input type="text" value="GARCÍA SOLER" required>
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group full-w">
+                <label>DIRECCIÓN DE ENTREGA</label>
+                <input type="text" value="CALLE 85 # 11-53, CHAPINERO" required>
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label>DEPARTAMENTO / REGIÓN</label>
+                <input type="text" value="CUNDINAMARCA / BOGOTÁ" required>
+              </div>
+              <div class="form-group">
+                <label>CIUDAD / MUNICIPIO</label>
+                <input type="text" value="BOGOTÁ D.C." required>
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label>PAÍS / TERRITORIO</label>
+                <input type="text" value="COLOMBIA (CO)" required>
+              </div>
+              <div class="form-group">
+                <label>CELULAR PARA NOTIFICACIONES (SMS / WHATSAPP)</label>
+                <input type="text" value="+57 310 448 2090" required>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- 02 LOGÍSTICA DE ENVÍO -->
+        <div class="checkout-card">
+          <div class="cc-header-num">
+            <span class="num-box">02</span>
+            <h3>LOGÍSTICA DE ENVÍO</h3>
+            <span class="cc-right-code">TARIFAS DE ZONA COLOMBIA</span>
+          </div>
+
+          <div class="shipping-options-list">
+            <label class="ship-option active-ship">
+              <input type="radio" name="shipping" checked>
+              <div class="ship-info">
+                <strong>ENVÍO ESTÁNDAR NACIONAL (2-4 DÍAS HÁBILES)</strong>
+                <span>Envío gratis a todo Colombia con guía de rastreo y firma electrónica de entrega.</span>
+              </div>
+              <div class="ship-price">
+                <span class="free-badge">GRATIS</span>
+              </div>
+            </label>
+
+            <label class="ship-option">
+              <input type="radio" name="shipping">
+              <div class="ship-info">
+                <strong>COURIER EXPRESS PRIORITARIO (MISMO DÍA / 24H)</strong>
+                <span>Entrega express prioritaria motorizada antes de las 17:00 garantizada.</span>
+              </div>
+              <div class="ship-price">
+                <span class="paid-price">$18.000 COP</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- 03 MEDIOS DE PAGO SEGUROS -->
+        <div class="checkout-card">
+          <div class="cc-header-num">
+            <span class="num-box">03</span>
+            <h3>MEDIOS DE PAGO SEGUROS</h3>
+            <span class="cc-right-code">SSL // 256-BIT</span>
+          </div>
+
+          <div class="payment-tabs-row">
+            <button class="pt-btn active-pt">PSE DÉBITO</button>
+            <button class="pt-btn">TARJETAS CR/DB</button>
+            <button class="pt-btn">NEQUI / DAVIPLATA</button>
+            <button class="pt-btn">ADDI [3 CUOTAS]</button>
+          </div>
+
+          <div class="payment-details-box">
+            <p class="pd-desc">MEDIOS DE PAGO: NEQUI, DAVIPLATA, PSE, TARJETAS DC/CC, ADDI, MASTERCARD, VISA.</p>
+            
+            <div class="form-group">
+              <label>NÚMERO DE TARJETA</label>
+              <input type="text" value="4632 •••• •••• 8821">
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label>CADUCIDAD (MM/AA)</label>
+                <input type="text" value="11/27">
+              </div>
+              <div class="form-group">
+                <label>CVC / CVV</label>
+                <input type="password" value="985">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>NOMBRE DEL TITULAR DE LA TARJETA</label>
+              <input type="text" value="ALEJANDRO GARCIA SOLER">
+            </div>
+
+            <div class="addi-banner-box">
+              <div class="addi-left">
+                <strong>ADDI //</strong> Paga en 3 cuotas mensuales de $146.400 COP sin interés ni papeleos.
+              </div>
+              <div class="addi-right">
+                MEDIOS DE PAGO: NEQUI, DAVIPLATA, PSE, TARJETAS
+              </div>
+            </div>
+          </div>
+
+          <div class="security-guarantee-row">
+            <span>🔒 PAGO ENCRIPTADO SSL 256-BIT (Cumplimiento estricto PSD2 y SCA bancario europeo).</span>
+            <span>🛡 GARANTÍA DE DEVOLUCIÓN 30 DÍAS (Devoluciones sin costo y garantía directa de fábrica).</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- COLUMNA DERECHA: RESUMEN DEL PEDIDO Y CHECKOUT -->
+      <div class="checkout-summary-col">
+        <div class="summary-box">
+          <div class="sb-header">
+            <span>RESUMEN DEL PEDIDO</span>
+            <span class="sb-count">2 ARTÍCULOS [EDITAR]</span>
+          </div>
+
+          <!-- Item 1 en Resumen -->
+          <div class="sum-item-row">
+            <div class="sum-thumb">
+              <img src="img/pay-thumb-1.jpg" alt="Neo-Tokyo Acid Wash Tee">
+            </div>
+            <div class="sum-info">
+              <strong>NEO-TOKIO ACID WASH TEE</strong>
+              <span class="sum-sub">TALLA: L • COLOR: GRAFITO</span>
+              <span class="sum-spec">SECCIÓN TÉCNICA: 350 GSM</span>
+              <div class="sum-qty-row">
+                <span>- 1 +</span>
+                <span class="sum-item-price">$249.000 COP</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 en Resumen -->
+          <div class="sum-item-row">
+            <div class="sum-thumb">
+              <img src="img/pay-thumb-2.jpg" alt="System Crash Oversized Tee">
+            </div>
+            <div class="sum-info">
+              <strong>SYSTEM CRASH OVERSIZED TEE</strong>
+              <span class="sum-sub">TALLA: M • COLOR: NEGRO BRIDIZANA</span>
+              <span class="sum-spec">DROP 04 // OFICIAL</span>
+              <div class="sum-qty-row">
+                <span>- 1 +</span>
+                <span class="sum-item-price">$239.000 COP</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Aplicación de Código Promocional -->
+          <div class="promo-code-box">
+            <span class="pc-label">CÓDIGO DE DESCUENTO // CUPÓN PROMOCIONAL</span>
+            <div class="pc-input-row">
+              <input type="text" value="STREET10" class="pc-input">
+              <button class="btn-secondary pc-btn">APLICAR</button>
+            </div>
+            <span class="pc-active-msg">✔ CÓDIGO ACTIVE: STREET10 (-10% EXTRA DROP) [QUITAR]</span>
+          </div>
+
+          <!-- Cálculos de Totales -->
+          <div class="totals-calculation-box">
+            <div class="tot-row">
+              <span>SUBTOTAL PRODUCTOS</span>
+              <span>$488.000 COP</span>
+            </div>
+            <div class="tot-row discount-row">
+              <span>↻ DESCUENTO STREET10 (-10%)</span>
+              <span>- $48.800 COP</span>
+            </div>
+            <div class="tot-row">
+              <span>ENVÍO ESTÁNDAR NACIONAL</span>
+              <span class="free-txt">GRATIS</span>
+            </div>
+            <div class="tot-row taxes-row">
+              <span>IMPUESTOS (19% IVA INCLUIDO)</span>
+              <span>$83.450 COP</span>
+            </div>
+
+            <div class="grand-total-row">
+              <div class="gtr-left">
+                <strong>TOTAL FINAL</strong>
+                <span>TODAS LAS TASAS Y ENVÍO INCLUIDOS</span>
+              </div>
+              <div class="gtr-right">
+                <span class="gt-currency">COP</span>
+                <span class="gt-price">$439.200</span>
+              </div>
+            </div>
+            <span class="gt-sub">O 3 CUOTAS DE 146.400 COP CON ADDI</span>
+          </div>
+
+          <!-- Botón Finalizar Compra Masivo -->
+          <div class="final-buy-container">
+            <a href="#" class="btn-primary btn-pay-now">
+              FINALIZAR COMPRA / PAGAR PEDIDO ($439.200 COP) ➔
+            </a>
+            <p class="terms-warning">
+              AL CONFIRMAR EL PEDIDO ACEPTAS LOS TÉRMINOS DE VENTA, COMPRA Y LA RESERVA DE STOCK POR 15 MIN.
+            </p>
+            <div class="auth-cert-box">
+              <span>📦 Prendas confeccionadas en tiradas cerradas de taller artesanal. Cada paquete incluye certificado de autenticidad seriada numerada a mano.</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SECCIÓN DE SUSCRIPCIÓN AL DROP 05 -->
+    <section class="section-container newsletter-banner" style="margin-top: 50px;">
+      <div class="news-banner-content">
+        <div class="news-banner-info">
+          <span class="section-tag">[EARLY ACCESS // PROTOCOL]</span>
+          <h2 class="news-banner-title">SUBSCRIBE TO DROP 05</h2>
+          <p class="news-banner-text">Receive private cryptographic access keys 15 minutes before global public releases. Guaranteed zero marketing fluff.</p>
+        </div>
+        <form class="news-banner-form" onsubmit="event.preventDefault();">
+          <input type="email" placeholder="ENTER EMAIL IDENTIFIER" class="news-input" required>
+          <button type="submit" class="btn-primary news-btn">GET KEY</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER EXTENSO DE 4 COLUMNAS -->
+  <footer class="site-footer">
+    <div class="footer-columns-container">
+      
+      <div class="footer-col-main">
+        <div class="footer-brand">
+          <span class="brand-bold">KULT</span> <span class="brand-sub">STUDIO</span>
+        </div>
+        <p class="footer-brand-desc">
+          Operating at the intersection of raw architectural brutalism, high-density silkscreen manipulation, and heavy architectural cuts. Every collection is numbered, archived, and never reprinted.
+        </p>
+        <div class="footer-security-tags">
+          <span class="sec-tag">[TIENDA OFICIAL COLOMBIA]</span>
+          <span class="sec-tag">[100% ORGANICO]</span>
+        </div>
+      </div>
+
+      <div class="footer-col-links">
+        <h4 class="footer-link-title">CATALOGUE</h4>
+        <ul>
+          <li><a href="#">All Garments</a></li>
+          <li><a href="#">New Releases</a></li>
+          <li><a href="#">Graphic Heavy</a></li>
+          <li><a href="#">Boxy & Oversized</a></li>
+          <li><a href="#">Colección Completa</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col-links">
+        <h4 class="footer-link-title">CLIENT RELATIONS</h4>
+        <ul>
+          <li><a href="#">Order Tracking</a></li>
+          <li><a href="#">Garment Spec & Sizing</a></li>
+          <li><a href="#">Worldwide Logistics</a></li>
+          <li><a href="#">Customer Care</a></li>
+          <li><a href="#">Terms of Artifact Sale</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col-links">
+        <h4 class="footer-link-title">NETWORK</h4>
+        <ul>
+          <li><a href="#">INSTAGRAM <span class="net-tag">[EXT]</span></a></li>
+          <li><a href="#">DISCORD ARCHIVE <span class="net-tag">[EXT]</span></a></li>
+          <li><a href="#">SPOTIFY TRANSMISSIONS <span class="net-tag">[EXT]</span></a></li>
+          <li><a href="#">Editorial & Manifiesto</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom-bar">
+      <div>© 2024 KULT STUDIO INC. • ALL RIGHTS RESERVED • TIENDA OFICIAL COLOMBIA</div>
+      <div class="footer-bottom-status">
+        <span class="status-crypt">🔒 256-BIT ENCRYPTION</span>
+        <a href="#" class="status-link">VISA // MC // STRIPE</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
