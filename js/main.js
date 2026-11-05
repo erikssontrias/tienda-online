@@ -535,3 +535,57 @@ function aplicarFiltrosY1Tallas() {
         renderizarGrillaProductos(productosFiltrados);
     }
 }
+/**
+ * ===================================================================
+ * KULT STUDIO - MÓDULO C: CARGAR MÁS INVENTARIO Y NEWSLETTER
+ * ===================================================================
+ */
+
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // 1. Lógica del botón "CARGAR MÁS CAMISETAS"
+    const btnCargarMas = document.querySelector('.load-more-btn');
+    const barraProgreso = document.querySelector('.lm-fill');
+    const infoProgreso = document.querySelector('.lm-info-row span');
+
+    if (btnCargarMas) {
+        btnCargarMas.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            // Simular la carga del 100% del inventario
+            if (barraProgreso) {
+                barraProgreso.style.width = '100%';
+            }
+            
+            if (infoProgreso) {
+                infoProgreso.textContent = 'MOSTRANDO 24 DE 24 PRODUCTOS DISPONIBLES • 100% COMPLETADO';
+            }
+            
+            // Actualizar el estado visual del botón para indicar que ya se cargó todo
+            btnCargarMas.textContent = '■ TODO EL INVENTARIO CARGADO';
+            btnCargarMas.style.opacity = '0.5';
+            btnCargarMas.style.pointerEvents = 'none';
+
+            console.log('■ Inventario total de coleccion cargado exitosamente.');
+        });
+    }
+
+    // 2. Lógica del formulario de suscripción (SUBSCRIBE TO DROP 05)
+    const formNewsletter = document.querySelector('.news-banner-form');
+    const inputNewsletter = document.querySelector('.news-input');
+
+    if (formNewsletter && inputNewsletter) {
+        formNewsletter.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = inputNewsletter.value.trim();
+
+            if (email !== '') {
+                // Alerta de confirmación de registro al estilo KULT
+                alert(`✔ ¡ACCESO CONCEDIDO!\n\nEl correo [ ${email} ] ha sido registrado exitosamente. Recibirás tus llaves criptográficas 15 minutos antes del lanzamiento global del DROP 05.`);
+                inputNewsletter.value = ''; // Limpiar el campo
+            } else {
+                alert('[!] Por favor ingresa un identificador de correo válido.');
+            }
+        });
+    }
+});
