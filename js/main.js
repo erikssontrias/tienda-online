@@ -339,3 +339,199 @@ function renderizarGrillaProductos(listaProductos) {
         gridProductos.appendChild(article);
     });
 }
+/**
+ * ===================================================================
+ * KULT STUDIO - MÓDULO B: FILTRADO DINÁMICO POR MENÚ LATERAL
+ * ===================================================================
+ */
+
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Detectar cambios en cualquier checkbox del sistema de filtros lateral
+    const filtrosSidebar = document.querySelectorAll('.sidebar-filters input[type="checkbox"], aside input[type="checkbox"], .filter-sidebar input[type="checkbox"]');
+    
+    // 2. Detectar clics en los botones de tallas dentro del panel lateral de filtros
+    const botonesTallaFiltro = document.querySelectorAll('.sidebar-filters .size-btn, .sidebar-filters .filter-size');
+
+    // Función principal que recopila todos los filtros activos y filtra la grilla
+    function aplicarFiltrosAvanzados() {
+        // Obtener todos los checkboxes marcados y extraer sus textos asociados o valores
+        const checkboxesMarcados = document.querySelectorAll('.sidebar-filters input[type="checkbox"]:checked, aside input[type="checkbox"]:checked');
+        const criteriosTexto = Array.from(checkboxesMarcados).map(chk => {
+            // Intentamos obtener el texto de la etiqueta adyacente o el valor
+            const label = chk.closest('label') || chk.nextElementSibling;
+            return label ? label.textContent.trim().toLowerCase() : '';
+        });
+
+        // Obtener las tallas seleccionadas en los botones del filtro lateral
+        const tallasSeleccionadas = Array.from(document.querySelectorAll('.sidebar-filters .size-btn.active, .sidebar-filters .active-size'))
+            .map(btn => btn.textContent.trim().toUpperCase());
+
+        // Si no hay ningún filtro seleccionado, mostramos todos los productos
+        if (criteriosTexto.length === 0 && tallasSeleccionadas.length === 0) {
+            renderizarGrillaProductos(productosKult);
+            return;
+        }
+
+        // Filtrar la base de datos de productos según los criterios activos
+        const productosFiltrados = productosKult.filter(producto => {
+            // Evaluamos si el producto coincide con los textos de los filtros (por nombre, desc o SKU)
+            let coincideTexto = criteriosTexto.length === 0 || criteriosTexto.some(criterio => 
+                producto.nombre.toLowerCase().includes(criterio) || 
+                producto.sku.toLowerCase().includes(criterio) ||
+                (producto.corte && producto.corte.toLowerCase().includes(criterio)) ||
+                (producto.gramaje && producto.gramaje.toLowerCase().includes(criterio))
+            );
+
+            // Evaluamos si coincide con las tallas (si el producto tiene array de tallas)
+            let coincideTalla = tallasSeleccionadas.length === 0 || (
+                producto.tallas && producto.tallas.some(t => tallasSeleccionadas.includes(t))
+            );
+
+            return coincideTexto && coincideTalla;
+        });
+
+        // Renderizamos los resultados filtrados en la pantalla
+        renderizarGrillaProductos(productosFiltrados);
+        console.log('■ Filtros avanzados aplicados. Coincidencias:', productosFiltrados.length);
+    }
+
+    // Escuchar eventos en checkboxes
+    if (filtrosSidebar.length > 0) {
+        filtrosSidebar.forEach(chk => {
+            chk.addEventListener('change', aplicarFiltrosAvanzados);
+        });
+    }
+
+    // Escuchar clics en los botones de tallas del filtro lateral (con toggle de clase active)
+    if (botonesTallaFiltro.length > 0) {
+        botonesTallaFiltro.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                btn.classList.toggle('active-size');
+                btn.classList.toggle('active');
+                aplicarFiltrosAvanzados();
+            });
+        });
+    }
+});
+/**
+ * ==============================================
+ * KULT STUDIO - CORRECCIÓN ESPECÍFICA: [LIMPIAR] 
+ * ==============================================
+ */
+
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Quitar la selección por defecto de M y L al cargar la página si vienen marcadas desde el HTML
+    const botonesTallaFiltro = document.querySelectorAll('.sidebar-filters button, .sidebar-filters .size-btn, aside button');
+    
+    botonesTallaFiltro.forEach(btn => {
+        const textoTalla = btn.textContent.trim().toUpperCase();
+        // Si el HTML trae M o L activas por defecto, se las retiramos para que inicie limpio
+        if (textoTalla === 'M' || textoTalla === 'L') {
+            btn.classList.remove('active', 'active-size', 'selected');
+        }
+
+        // Asegurar que al hacer clic en cualquier talla del filtro lateral se pueda alternar
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            btn.classList.toggle('active');
+            btn.classList.toggle('active-size');
+        });
+    });
+
+    // 2. Hacer funcionar exclusivamente el botón [LIMPIAR]
+    let btnLimpiarReal = null;
+    document.querySelectorAll('a, button, span, div').forEach(el => {
+        if (el.textContent.trim() === '[LIMPIAR]' || el.textContent.trim() === 'LIMPIAR') {
+            btnLimpiarReal = el;
+        }
+    });
+
+    if (btnLimpiarReal) {
+        btnLimpiarReal.style.cursor = 'pointer';
+        btnLimpiarReal.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            // Limpiar buscador si existe
+            const inputBuscador = document.querySelector('input[type="text"], .search-input');
+            if (inputBuscador) inputBuscador.value = '';
+
+            // Desmarcar todos los checkboxes de los filtros
+            document.querySelectorAll('input[type="checkbox"]').forEach(chk => chk.checked = false);
+
+            // Quitar clases activas de todas las tallas
+            botonesTallaFiltro.forEach(btn => btn.classList.remove('active', 'active-size', 'selected'));
+
+            // Restaurar la grilla completa con todos los productos originales
+            if (typeof renderizarGrillaProductos === 'function' && typeof productosKult !== 'undefined') {
+                renderizarGrillaProductos(productosKult);
+            }
+
+            console.log('■ Botón [LIMPIAR] ejecutado correctamente.');
+        });
+    }
+});
+/**
+ * ===================================================================
+ * KULT STUDIO - INTERACTIVIDAD Y FILTRADO POR TALLAS (SZ-BOX)
+ * ===================================================================
+ */
+
+document.addEventListener('DOMContentLoaded', () => {
+    const botonesTalla = document.querySelectorAll('.sidebar-filters .sz-box');
+
+    botonesTalla.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            // 1. Alterna el estado visual (activa o desactiva el color amarillo de la talla)
+            btn.classList.toggle('active-sz');
+
+            // 2. Ejecuta el motor de filtrado global para actualizar la grilla de productos
+            aplicarFiltrosY1Tallas();
+        });
+    });
+});
+
+// Función centralizada para filtrar la grilla combinando checkboxes y tallas
+function aplicarFiltrosY1Tallas() {
+    // Obtener todas las tallas que el usuario tenga seleccionadas en ese momento
+    const tallasSeleccionadas = Array.from(document.querySelectorAll('.sidebar-filters .sz-box.active-sz'))
+        .map(btn => btn.textContent.trim().toUpperCase());
+
+    // Obtener los checkboxes activos del menú lateral
+    const checkboxesMarcados = document.querySelectorAll('.sidebar-filters input[type="checkbox"]:checked');
+    const criteriosTexto = Array.from(checkboxesMarcados).map(chk => {
+        const label = chk.closest('label');
+        return label ? label.textContent.trim().toLowerCase() : '';
+    });
+
+    // Si no hay ningún filtro ni talla seleccionada, mostramos todos los productos originales
+    if (tallasSeleccionadas.length === 0 && criteriosTexto.length === 0) {
+        if (typeof renderizarGrillaProductos === 'function' && typeof productosKult !== 'undefined') {
+            renderizarGrillaProductos(productosKult);
+        }
+        return;
+    }
+
+    // Filtrar la base de datos 'productosKult'
+    const productosFiltrados = productosKult.filter(producto => {
+        let coincideTexto = criteriosTexto.length === 0 || criteriosTexto.some(criterio => 
+            producto.nombre.toLowerCase().includes(criterio) || 
+            producto.sku.toLowerCase().includes(criterio)
+        );
+
+        // Si tu objeto producto tiene un array de tallas (ej: tallas: ['S', 'M', 'L']), las evalúa. 
+        // Si no las tiene definidas aún, por defecto dejará pasar el filtro visualmente para evitar que la grilla quede en blanco.
+        let coincideTalla = tallasSeleccionadas.length === 0 || (
+            producto.tallas ? producto.tallas.some(t => tallasSeleccionadas.includes(t)) : true
+        );
+
+        return coincideTexto && coincideTalla;
+    });
+
+    // Redibujar la grilla con los resultados obtenidos
+    if (typeof renderizarGrillaProductos === 'function') {
+        renderizarGrillaProductos(productosFiltrados);
+    }
+}
